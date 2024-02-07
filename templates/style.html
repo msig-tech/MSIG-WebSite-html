@@ -1,0 +1,259 @@
+<!--
+##############################################
+#                                            #
+#     Copyright, this script is owned by     #
+#        MoneySmart Investment Group         #
+#                                            #
+#                                            #
+#      M   M     SSS     IIIII     GGG       #
+#      MM MM    S   S      I      G   G      #
+#      MM MM    S          I      G          #
+#      M M M     SSS       I      GGGGG      #
+#      M   M        S      I      G   G      #
+#      M   M    S   S      I      G   G      #
+#      M   M     SSS     IIIII     GGG       #
+#                                            #
+#                                            #
+#             All right reserved             #
+# https://www.moneysmartinvestmentgroup.com  #
+#                                            #
+##############################################
+--> 
+
+{% extends "fr/maintemplate.html" %}
+
+{% block content %}
+ 
+
+<h1></h1>
+<h1>voici un titre H1</h1>
+<h2>voici un titre H2</h2>
+<h3>voici un titre H3</h3>
+<h4>voici un titre H4</h4>
+<h5>voici un titre H5</h5>
+<h6>voici un titre H6</h6>
+
+<p>Texte par defaut sans modification<br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis imperdiet proin fermentum leo vel orci porta. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. A diam sollicitudin tempor id eu nisl nunc. Euismod elementum nisi quis eleifend quam adipiscing vitae proin. Cras adipiscing enim eu turpis. Commodo ullamcorper a lacus vestibulum sed arcu. Habitasse platea dictumst quisque sagittis. Etiam erat velit scelerisque in dictum non consectetur a erat. Adipiscing elit ut aliquam purus sit amet luctus. Habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat. Sagittis eu volutpat odio facilisis. Ut faucibus pulvinar elementum integer enim.
+
+</p>
+
+<div class="w3-padding-48">
+    <div class="msig-card-gold w3-margin">
+
+        <div class="w3-container">
+
+            <h1 class="w3-panel w3-center">Gold frame</h1>
+                <p class="w3-panel w3-center">
+                    div class="w3-padding-48" (ouverture premier div padding 48 haut-bas)<br>
+                    div class="msig-card-gold w3-margin" (ouverture 2ieme div imbriqué "card" avec margin)<br>
+                    div class="w3-container" (ouverture d'un container pour le contenus)<br>
+                    h1 class="w3-panel w3-center" (titre du container - center)<br>
+                    p class="w3-panel w3-center" (texte paragraphe - center)<br>
+                </p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="w3-padding-48">
+    <div class="msig-card-gold w3-margin">
+
+        <h1 class="w3-panel w3-center">Gold frame + sous sujet frame mauve
+        </h1>
+
+        <div class="w3-container w3-padding">
+            <div class="msig-card">
+                <h3 class="w3-center">
+                1ier sous-titre
+                </h3>
+
+                <div class="w3-container">
+                    <div class="w3-half">
+                        <p class="msig-left-align">
+                        texte à gauche<br>
+                        image à droite
+                        </p>
+                        
+                    </div>
+                    <div class="w3-half msig-right-align">
+                        <img src="static/images/MSIG-Official-200px.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-container w3-padding">
+            <div class="msig-card">
+                <h3 class="w3-center">
+                2ieme sous-titre
+                </h3>
+
+                <div class="w3-container">
+                    <div class="w3-panel w3-half msig-left-align">
+                        <img src="static/images/MSIG-Official-200px.png">
+                    </div>
+
+                    <div class="w3-panel w3-half">
+                        <p class="msig-right-align">
+                        image à gauche<br>
+                        texte à droite
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="w3-container w3-padding">
+            <div class="msig-card">
+                <h3 class="w3-center">
+                Codage
+                </h3>
+
+                <div class="w3-container">
+                    <div class="w3-panel w3-half msig-left-align">
+                        <p class="msig-left-align">
+                            div class="w3-padding-48" - ouverture premier div avec padding 48 haut bas<br>
+                            div class="msig-card-gold w3-margin" - Gold frame<br>
+                            h1 class="w3-panel w3-center" - Titre du bloc<br>
+                                    
+                        </p>    
+                    </div>
+
+                    <div class="w3-panel w3-half">
+                        <p class="msig-right-align">
+                            TEXT LEFT ALIGN / IMAGE RIGHT<br>
+                            Inverse pour le contraire<br><br>
+                            div class="w3-container w3-padding" - premier container<br>
+                            div class="msig-card" - frame mauve<br><br>
+                            h3 class="w3-center" - sous-titre<br><br>
+                            div class="w3-container" - container texte/image<br>
+                            div class="w3-half" - diviser en 2 colonnes<br>
+                            p class="msig-left-align" - aligner texte à droite<br><br>
+                            div class="w3-half msig-right-align" - 2ieme colonne aligné à droite / image<br>
+                            img src="static/images/MSIG-Official-200px.png"<br>
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+<div class="w3-padding-48">
+    <div class="msig-card-gold w3-margin">
+        <h1 class="w3-panel w3-center">
+        4 colonnes responsive
+        </h1>
+        <div class="w3-row-padding">
+            <div class="w3-quarter">
+                <div class="msig-card w3-margin">
+                    <div class="w3-container">
+                        <h3 class="w3-center">
+                        1
+                        </h3>
+
+                        <div class="w3-container">
+                            <p>
+                                div class="w3-padding-48" - ouverture premier div avec padding 48 haut bas<br>
+                                div class="msig-card-gold w3-margin" - Gold frame<br>
+                                h1 class="w3-panel w3-center" - Titre du bloc<br>
+                                div class="w3-row-padding" - colonne responsive<br><br>
+                                
+                                div class="w3-quarter" - 4 colonnes<br>
+                                div class="msig-card w3-margin" - frame mauve<br>
+                                div class="w3-container" - container<br>
+                                h3 class="w3-center" - titre du frame mauve<br>
+                                p - texte<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-quarter">
+                <div class="msig-card w3-margin">
+                    <div class="w3-container">
+                        <h3 class="w3-center">
+                        2
+                        </h3>
+
+                        <div class="w3-container">
+                            <p>
+                                div class="w3-quarter" - 4 colonnes<br>
+                                div class="msig-card w3-margin" - frame mauve<br>
+                                div class="w3-container" - container<br>
+                                h3 class="w3-center" - titre du frame mauve<br>
+                                p - texte<br>
+                            </p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="w3-quarter">
+                <div class="msig-card w3-margin">
+                    <div class="w3-container">
+                        <h3 class="w3-center">
+                        3
+                        </h3>
+
+                        <div class="w3-container">
+                            <p>
+                                div class="w3-quarter" - 4 colonnes<br>
+                                div class="msig-card w3-margin" - frame mauve<br>
+                                div class="w3-container" - container<br>
+                                h3 class="w3-center" - titre du frame mauve<br>
+                                p - texte<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="w3-quarter">
+                <div class="msig-card w3-margin">
+                    <div class="w3-container">
+                        <h3 class="w3-center">
+                        4-1
+                        </h3>
+
+                        <div class="w3-container">
+                            <p>
+                                div class="w3-quarter" - 4 colonnes<br>
+                                div class="msig-card w3-margin" - frame mauve<br>
+                                div class="w3-container" - container<br>
+                                h3 class="w3-center" - titre du frame mauve<br>
+                                p - texte<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="msig-card w3-margin">
+                    <div class="w3-container">
+                        <h3 class="w3-center">
+                        4-2
+                        </h3>
+
+                        <div class="w3-container">
+                            <p>
+                                (enlève le premier div class="w3-quarter") - met un élément en dessous full responsive
+                                div class="msig-card w3-margin" - frame mauve<br>
+                                div class="w3-container" - container<br>
+                                h3 class="w3-center" - titre du frame mauve<br>
+                                p - texte<br>
+                            </p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

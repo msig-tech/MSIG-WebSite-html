@@ -1,0 +1,67 @@
+{% extends "fr/maintemplate.html" %}
+
+{% block content %}
+<div class="w3-container">
+<a href="{{ url_for('adminpage') }}">back to admin</a>
+</div>
+
+<h1 class="w3-panel w3-center">Gestion des groupes</h1>
+
+<div class="w3-padding-48">
+    <div class="msig-card-gold w3-margin">
+
+        <div class="w3-container">
+            <h2 class="w3-panel w3-center">Liste des groupes</h2>
+            <table class="w3-table msig-margin-end">
+                <tr>
+                    <th class="msig-card-gold">Nom</th>
+                    <th class="msig-card-gold">Description</th>
+                </tr>
+                {% for role in roles %}
+                <tr>
+                    <td class="msig-card">{{ role.name }}</td>
+                    <td class="msig-card">{{ role.description }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="w3-padding-48">
+    <div class="msig-card-gold w3-margin">
+
+        <div class="w3-container">
+            <h2 class="w3-panel w3-center">Création</h2>
+            <form method="POST" action="{{ url_for('roles') }}">
+                <div class="w3-row">
+                    {{ form.hidden_tag() }}
+                    <div class="w3-col w3-container w3-right-align msig-margin-end" style="width:40%;">
+                        <label for="name">Role Name :</label>
+                    </div>
+                    <div class="w3-col w3-container" style="width:60%;">
+                        <input class="msig-background w3-text-white" type="text" id="name" name="name" required>
+                    </div>
+                </div>
+
+                <div class="w3-row">
+                    <div class="w3-col w3-container w3-right-align msig-margin-end" style="width:40%;">
+                        <label for="description">Role Description :</label>
+                    </div>
+                    <div class="w3-col w3-container" style="width:60%;">
+                        <input class="msig-background w3-text-white" type="text" id="description" name="description" required>
+                    </div>
+                </div>
+                
+                <div class="w3-row">
+                    <div class="form-group w3-center">
+                        <button class="w3-button msig-transparent-background msig-button-gold-hover w3-round-xlarge" type="submit">Enregistrer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

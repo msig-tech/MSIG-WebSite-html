@@ -1,0 +1,161 @@
+<!--
+##############################################
+#                                            #
+#     Copyright, this script is owned by     #
+#        MoneySmart Investment Group         #
+#                                            #
+#                                            #
+#      M   M     SSS     IIIII     GGG       #
+#      MM MM    S   S      I      G   G      #
+#      MM MM    S          I      G          #
+#      M M M     SSS       I      GGGGG      #
+#      M   M        S      I      G   G      #
+#      M   M    S   S      I      G   G      #
+#      M   M     SSS     IIIII     GGG       #
+#                                            #
+#                                            #
+#             All right reserved             #
+# https://www.moneysmartinvestmentgroup.com  #
+#                                            #
+##############################################
+--> 
+
+{% extends "fr/maintemplate.html" %}
+
+{% block content %}
+<div class="w3-container">
+<a href="{{ url_for('adminpage') }}">back to admin</a>
+</div>
+
+<h1 class="w3-panel w3-center">Détail du compte  <b><u>{{ user.username }}</b></u></h1>
+
+<div class="w3-padding-48">
+    <div class="msig-card-gold w3-margin">
+
+        <div class="w3-container">
+            <h2 class="w3-panel w3-center">Informations interne <b><u>{{ user.username }}</b></u></h2>
+            <table class="w3-table msig-margin-end">
+                <tr>
+                    <th class="msig-card-gold">UID</th>
+                    <th class="msig-card-gold">Registred</th>
+                    <th class="msig-card-gold">Username</th>
+                    <th class="msig-card-gold">Active</th>
+                    <th class="msig-card-gold">Role</th>
+                    <th class="msig-card-gold">Actions</th>
+                </tr>
+                <form method="POST" action="{{ url_for('update_role', uid=user.uid) }}">
+                    {{ form.hidden_tag() }}
+                    <tr>
+                        <td class="msig-card">{{ user.uid }}</td>
+                        <td class="msig-card">{{ user.register }}</td>
+                        <td class="msig-card">{{ user.username }}</td>
+                        <td class="msig-card">{{ user.active }}</td>
+                        <td class="msig-card">
+                            <select name="role">
+                                {% for role in roles %}
+                                    <option value="{{ role.name }}" {% if user.roles and user.roles[0].name == role.name %}selected{% endif %}>{{ role.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                        <td class="msig-card">
+                            <button type="submit">Enregistrer</button>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="w3-padding-48">
+    <div class="msig-card-gold w3-margin">
+        <div class="w3-container">
+            <h2 class="w3-panel w3-center">Informations personnelles  <b><u>{{ user.username }}</b></u></h2>
+            <table class="w3-table msig-margin-end">
+                <tr>
+                    <th class="msig-card-gold">FirstName</th>
+                    <th class="msig-card-gold">LastName</th>
+                    <th class="msig-card-gold">Email</th>
+                    <th class="msig-card-gold">Language</th>
+                </tr>
+                <tr>
+                    <td class="msig-card">{{ user.firstname }}</td>
+                    <td class="msig-card">{{ user.lastname }}</td>
+                    <td class="msig-card">{{ user.email }}</td>
+                    <td class="msig-card">{{ user.language }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="w3-padding-48">
+    <div class="msig-card-gold w3-margin">
+        <div class="w3-container">
+            <h2 class="w3-panel w3-center">Informations civique  <b><u>{{ user.username }}</b></u></h2>
+            <table class="w3-table msig-margin-end">
+                <tr>
+                    <th class="msig-card-gold">Street Address</th>
+                    <th class="msig-card-gold">City</th>
+                    <th class="msig-card-gold">State</th>
+                    <th class="msig-card-gold">Country</th>
+                    <th class="msig-card-gold">Zip</th>
+                </tr>
+                <tr>
+                    <td class="msig-card">{{ user.address }}</td>
+                    <td class="msig-card">{{ user.city }}</td>
+                    <td class="msig-card">{{ user.state }}</td>
+                    <td class="msig-card">{{ user.country }}</td>
+                    <td class="msig-card">{{ user.zip }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="w3-padding-48">
+    <div class="msig-card-gold w3-margin">
+        <div class="w3-container">
+            <h2 class="w3-panel w3-center">Informations parainnage <b><u>{{ user.username }}</b></u></h2>
+            <h3 class="w3-panel w3-center">Informations du parain</h3>
+            <table class="w3-table msig-margin-end">
+                <tr>
+                    <th class="msig-card-gold">UID</th>
+                    <th class="msig-card-gold">Username</th>
+                    <th class="msig-card-gold">Prénom</th>
+                    <th class="msig-card-gold">Nom</th>
+                    <th class="msig-card-gold">Courriel</th>
+                </tr>
+                <tr>
+                    <td class="msig-card">{{ user.parent_id }}</td>
+                    <td class="msig-card">{{ parent.username }}</td>
+                    <td class="msig-card">{{ parent.firstname }}</td>
+                    <td class="msig-card">{{ parent.lastname }}</td>
+                    <td class="msig-card">{{ parent.email }}</td>
+                </tr>
+            </table>
+            <h3 class="w3-panel w3-center">Informations sur l'équipe</h3>
+            <table class="w3-table msig-margin-end">
+                <tr>
+                    <th class="msig-card-gold">UID</th>
+                    <th class="msig-card-gold">Username</th>
+                    <th class="msig-card-gold">Prénom</th>
+                    <th class="msig-card-gold">Nom</th>
+                    <th class="msig-card-gold">Courriel</th>
+                </tr>
+                {% for referred_user in referred_users %}
+                <tr>
+                    <td class="msig-card">{{ referred_user.uid }}</td>
+                    <td class="msig-card">{{ referred_user.username }}</td>
+                    <td class="msig-card">{{ referred_user.firstname }}</td>
+                    <td class="msig-card">{{ referred_user.lastname }}</td>
+                    <td class="msig-card">{{ referred_user.email }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

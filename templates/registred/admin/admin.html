@@ -1,0 +1,59 @@
+<!--
+##############################################
+#                                            #
+#     Copyright, this script is owned by     #
+#        MoneySmart Investment Group         #
+#                                            #
+#                                            #
+#      M   M     SSS     IIIII     GGG       #
+#      MM MM    S   S      I      G   G      #
+#      MM MM    S          I      G          #
+#      M M M     SSS       I      GGGGG      #
+#      M   M        S      I      G   G      #
+#      M   M    S   S      I      G   G      #
+#      M   M     SSS     IIIII     GGG       #
+#                                            #
+#                                            #
+#             All right reserved             #
+# https://www.moneysmartinvestmentgroup.com  #
+#                                            #
+##############################################
+--> 
+
+{% extends "fr/maintemplate.html" %}
+
+{% block content %}
+
+<div class="w3-container">
+    <a href="{{ url_for('roles') }}">Gestion des groupes</a>
+</div>
+
+<div class="w3-padding-48">
+    <div class="msig-card-gold w3-margin">
+
+        <div class="w3-container">
+
+            <h1 class="w3-panel w3-center">Liste des utilisateurs</h1>
+            <table class="w3-table msig-margin-end">
+                <tr>
+                    <th class="msig-card-gold">Username</th>
+                    <th class="msig-card-gold">Email</th>
+                    <th class="msig-card-gold">First Name</th>
+                    <th class="msig-card-gold">Last Name</th>
+                </tr>
+                {% for user in users %}
+                <tr>
+                    <td class="msig-card"><a href="{{ url_for('user_edit', uid=user.uid) }}">{{ user.username }}</td>
+                    <td class="msig-card">{{ user.email }}</td>
+                    <td class="msig-card">{{ user.firstname }}</td>
+                    <td class="msig-card">{{ user.lastname }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}
