@@ -20,70 +20,88 @@
 ##############################################
 --> 
 
-{% extends "fr/maintemplate.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/msig-tech/msig-w3-css/msig.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum Gothic|Old Standard TT|Suez One|IM Fell English SC">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-{% block content %}
+    <script src="../../static/js/header-footer-loader-template.js"></script>
 
-<div class="w3-padding-48">
-    <div class="msig-card-gold w3-margin">
-        <h1 class="w3-panel w3-center">
-        Gestion Immobilière
-        </h1>
-        <div class="w3-row-padding">
-            <div class="w3-third">
-                <div class="msig-card w3-margin">
-                    <div class="w3-container">
-                        <h3 class="w3-center">
-                        Vente
-                        </h3>
+    <title>MSIG - MoneySmart Investment Group</title>
+</head>
 
-                        <div class="w3-container">
-                            <p>
-                                Vente de propriété ou terrain, principalement à Bali. Que ce soit nos propres propriétés ou celles d'autrui.
-                            </p>
+<body>
+
+    <div id="header"></div>
+
+    <div class="w3-container msig-padding-top-title">
+
+        <div class="w3-padding-48">
+            <div class="msig-card-gold w3-margin">
+                <h1 class="w3-panel w3-center">
+                Gestion Immobilière
+                </h1>
+                <div class="w3-row-padding">
+                    <div class="w3-third">
+                        <div class="msig-card w3-margin">
+                            <div class="w3-container">
+                                <h3 class="w3-center">
+                                Vente
+                                </h3>
+
+                                <div class="w3-container">
+                                    <p>
+                                        Vente de propriété ou terrain, principalement à Bali. Que ce soit nos propres propriétés ou celles d'autrui.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="w3-third">
-                <div class="msig-card w3-margin">
-                    <div class="w3-container">
-                        <h3 class="w3-center">
-                        Achat
-                        </h3>
+                    <div class="w3-third">
+                        <div class="msig-card w3-margin">
+                            <div class="w3-container">
+                                <h3 class="w3-center">
+                                Achat
+                                </h3>
 
-                        <div class="w3-container">
-                            <p>
-                                Achat de propriété ou terrain, principalement à Bali.<br>
-                                <b>Propriétaire unique</b> ; Nous offrons la possibilité aux investisseurs intéressés de pouvoir acheter une ou des propriétés par notre intermédiaire.<br>
-                                <b>Propriétaires partagés</b> ; Nous offrons la possibilité aux investisseurs d'acheter des propriétés en groupe. Dans cette condition, MSIG s'occupe de la gestion des propriétaires et chaque investisseur sera sur l'acte notarié selon les conditions pré-établies lors de la signature du contrat d'achat.
-                            </p>
-                        </div>
+                                <div class="w3-container">
+                                    <p>
+                                        Achat de propriété ou terrain, principalement à Bali.<br>
+                                        <b>Propriétaire unique</b> ; Nous offrons la possibilité aux investisseurs intéressés de pouvoir acheter une ou des propriétés par notre intermédiaire.<br>
+                                        <b>Propriétaires partagés</b> ; Nous offrons la possibilité aux investisseurs d'acheter des propriétés en groupe. Dans cette condition, MSIG s'occupe de la gestion des propriétaires et chaque investisseur sera sur l'acte notarié selon les conditions pré-établies lors de la signature du contrat d'achat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div> 
                     </div>
-                </div> 
-            </div>
 
-            <div class="w3-third">
-                <div class="msig-card w3-margin">
-                    <div class="w3-container">
-                        <h3 class="w3-center">
-                        Location
-                        </h3>
+                    <div class="w3-third">
+                        <div class="msig-card w3-margin">
+                            <div class="w3-container">
+                                <h3 class="w3-center">
+                                Location
+                                </h3>
 
-                        <div class="w3-container">
-                            <p>
-                                Location de propriété ou terrain, principalement à Bali. Que se soit nos propres propriétés ou celles d'autrui.<br>
-                                <b>Locataire unique</b> ; Nous offrons la possibilité aux investisseurs intéressés de pouvoir louer une ou des propriétés par notre intermédiaire.<br>
-                                <b>Locataires partagés</b> ; Nous offrons la possibilité aux investisseurs de louer des propriétés en groupe. Dans cette condition, MSIG s'occupe de la gestion des locataires et chaque investisseur sera sur l'acte notarié selon les conditions pré-établies lors de la signature du contrat de location.
-                            </p>
+                                <div class="w3-container">
+                                    <p>
+                                        Location de propriété ou terrain, principalement à Bali. Que se soit nos propres propriétés ou celles d'autrui.<br>
+                                        <b>Locataire unique</b> ; Nous offrons la possibilité aux investisseurs intéressés de pouvoir louer une ou des propriétés par notre intermédiaire.<br>
+                                        <b>Locataires partagés</b> ; Nous offrons la possibilité aux investisseurs de louer des propriétés en groupe. Dans cette condition, MSIG s'occupe de la gestion des locataires et chaque investisseur sera sur l'acte notarié selon les conditions pré-établies lors de la signature du contrat de location.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-{% endblock content %}
+        <div id="footer"></div>
 
