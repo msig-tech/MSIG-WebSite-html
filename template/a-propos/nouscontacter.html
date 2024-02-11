@@ -38,11 +38,48 @@
 
 <body>
 
-    <div id="header"></div>
+<div id="header"></div>
 
     <div class="w3-container msig-padding-top-title">
-        <h1>Nous Contacter</h1>
+        <div class="msig-card-gold msig-padding-bottom">
+            <div class="w3-container">
+                <h1 class="msig-center">Nous Contacter</h1>
+
+                <form action="mailto:info@moneysmartinvestmentgroup.com" method="post" enctype="text/plain" class="w3-container">
+                    <div class="w3-container w3-padding">
+                        <label for="name">Ton Nom</label>
+                        <input type="text" id="name" name="name" class="msig-input" required>
+                    </div>
+                    <div class="w3-container w3-padding">
+                        <label for="subject">Ton Sujet:</label>
+                        <select id="subject" name="subject" class="w3-select msig-input-dropdown" required>
+                          <option value="" disabled selected>Choisis un sujet</option>
+                          <option value="Forex">Forex</option>
+                          <option value="Crypto">Crypto</option>
+                          <option value="Formation">Formation</option>
+                          <option value="Voyage">Voyage</option>
+                          <option value="Immobilier">Immobilier</option>
+                          <option value="Système de référencement">Système de référencement</option>
+                          <option value="Support technique">Support technique</option>
+                          <option value="Demande de renseignements">Demande de renseignements</option>
+                          <option value="Autre">Autre</option>
+                        </select>
+                      </div>
+                    <div class="w3-container w3-padding">
+                        <label for="email">Ton E-mail</label>
+                        <input type="email" id="email" name="email" class="msig-input" required>
+                    </div>
+                    <div class="w3-container w3-padding">
+                        <label for="message">Ton Message</label>
+                        <textarea id="message" name="message" class="msig-input" style="resize:none;height:150px;" required></textarea>
+                    </div>
+                    <div class="w3-container msig-center w3-padding">
+                        <button type="submit" class="w3-button msig-button-blue">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
-    <div id="footer"></div>
+<div id="footer"></div>
 
