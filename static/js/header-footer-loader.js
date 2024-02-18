@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
-        pageLanguage: 'fr', 
+        pageLanguage: 'en', 
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
         autoDisplay: false,
         exclude: ['.notranslate']
