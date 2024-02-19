@@ -1,6 +1,4 @@
-// Ajoutez tout votre contenu JavaScript dans cet événement
 document.addEventListener("DOMContentLoaded", function() {
-    // Fonction pour inclure le header et le footer
     function includeHTML(file, targetId) {
         return fetch(file)
             .then(response => response.text())
@@ -10,12 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(error => console.error('Erreur de chargement du fichier:', error));
     }
     
-    // Inclure le header et le footer
     Promise.all([
         includeHTML('header.html', 'header'),
         includeHTML('footer.html', 'footer')
     ]).then(() => {
-        // Manipulations supplémentaires si nécessaire
     }).catch(error => console.error('Erreur lors du chargement des fichiers HTML:', error));
 });
 
